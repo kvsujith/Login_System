@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+
+<h1 align="center"> Welcome Admin {{user.username}} </h1>
+<h3 align="right"> <a href="logout">Logout </a></h3>
+<hr>
+{%  if messages   %}
+{% for i in messages %}
+<h4>{{i}}</h4>
+
+{% endfor %}
+{% endif %}
+
+<h1>Viewer Creation</h1>
+
+
+
+<form action="register" method="post">
+
+    {%  csrf_token %}
+    <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname" placeholder="John"><br><br>
+
+    <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname" placeholder="Smith"><br><br>
+
+    <label for="username">UserName</label>
+        <input type="text" name="username" id="username" placeholder="JohnSmith"><br><br>
+
+    <label for="email">Email ID</label>
+        <input type="text" name="email" id="email" placeholder="JohnSmith@email.com"><br><br>
+
+    <label for="pswd1">Password</label>
+        <input type="password" name="pswd1" id="pswd1" placeholder=""><br><br>
+
+    <label for="pswd2">Confirm Password</label>
+        <input type="password" name="pswd2" id="pswd2" placeholder=""><br><br>
+
+
+    <input type="submit" value="create">
+</form>
+</body>
+</html>
