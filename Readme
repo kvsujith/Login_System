@@ -1,3 +1,28 @@
+This is the Basic Login System with Session Managment
+
+> Here Instead of using existing django providing functionalities.
+> we done all of them seprately
+> Using sqllite as database
+
+> Login Page will be automaticaly brings to the Admin/Viewer page  depends on user Login
+
+
+--------------------AdminLogeed-------------------------
+      SigninPage --> AdminLogin --> AdminPage
+      
+      Admin page contains -->viewer creation form(seprate)
+      
+      AdminLogin <--AdminLogout
+      
+      
+------------------------Normal User Logged-----------------------------------------
+      SigninPage --> Normal User Login --> Userprofile
+      
+      
+      UserLogin <--UserLogout
+
+
+
 ---Admin Username and passsword---
 username:SujithV
 password:123456
